@@ -49,7 +49,7 @@ home_text_pm = f"Hey there! My name is {BOT_NAME}. I have many useful features f
 keyboard = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton(text="Help ❓", url=f"t.me/{BOT_USERNAME}?start=help"),
+            InlineKeyboardButton(text="Help", url=f"t.me/{BOT_USERNAME}?start=help"),
             
             ),
         ],
