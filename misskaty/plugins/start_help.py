@@ -23,9 +23,11 @@ from misskaty.vars import COMMAND_HANDLER
 
 home_keyboard_pm = InlineKeyboardMarkup(
     [
-        
+        [
             InlineKeyboardButton(text="Commands ❓", callback_data="bot_commands"),
-        
+            InlineKeyboardButton(
+                text="Owner",
+                url="https://t.me/Offline11_bot",
             ),
         ],
         [
@@ -38,7 +40,7 @@ home_keyboard_pm = InlineKeyboardMarkup(
         [
             InlineKeyboardButton(
                 text="Add Me To Your Group 🎉",
-                url=f"http://t.me/{BOT_USERNAME}?startgroup=new",http://t.me/{{BOT_USERNAME}?startgroup=new
+                url=f"http://t.me/{BOT_USERNAME}?startgroup=new",
             )
         ],
     ]
@@ -49,8 +51,10 @@ home_text_pm = f"Hey there! My name is {BOT_NAME}. I have many useful features f
 keyboard = InlineKeyboardMarkup(
     [
         [
-            InlineKeyboardButton(text="Help", url=f"t.me/{BOT_USERNAME}?start=help"),
-            
+            InlineKeyboardButton(text="Help ❓", url=f"t.me/{BOT_USERNAME}?start=help"),
+            InlineKeyboardButton(
+                text="owner �",
+                url="://t.me/Offline11_bot",
             ),
         ],
         [
@@ -58,7 +62,7 @@ keyboard = InlineKeyboardMarkup(
                 text="System Stats 💻",
                 callback_data="stats_callback",
             ),
-            InlineKeyboardButton(text="Dev 👨", url="https://t.me/@Offline11_bot"),
+            InlineKeyboardButton(text="Dev 👨", url="https://t.me/Offline11_bot"),
         ],
     ]
 )
@@ -128,7 +132,7 @@ async def start(self, ctx: Message, strings):
     else:
         await self.send_photo(
             ctx.chat.id,
-            photo="https://graph.org/file/ddc0de1c4ca7fd6280f31-306f83c95217a80e00.jpg",
+            photo="https://img.yasirweb.eu.org/file/90e9a448bc2f8b055b762.jpg",
             caption=home_text_pm,
             reply_markup=home_keyboard_pm,
             reply_to_message_id=ctx.id,
@@ -220,7 +224,7 @@ You can choose an option below, by clicking a button.
 
 Send command /privacy if you want know data collected by this bot.
 
-If you want give coffee to my owner.
+If you want give coffee to my owner you can send /donate command for more info.
 """.format(
             first_name=name,
             bot_name="MissKaty",
@@ -306,4 +310,3 @@ async def help_button(self: Client, query: CallbackQuery, strings):
         await self.answer_callback_query(query.id)
     except:
         pass
-            
